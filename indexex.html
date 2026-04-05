@@ -1,1 +1,130 @@
 
+/* =========================
+   CONTENT LOCK CONTAINER
+========================= */
+.content-lock-box {
+    position: relative;
+    margin-top: 20px;
+}
+
+/* Smooth fade like premium blogs */
+.content-fade {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 140px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0),
+        rgba(255,255,255,0.9),
+        rgba(255,255,255,1)
+    );
+}
+
+/* Banner (glass effect) */
+.lock-banner {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+
+    padding: 25px;
+    margin-top: -70px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.65);
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* Text above button */
+.lock-text {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+
+/* =========================
+   YOUR BUTTON (REFINED)
+========================= */
+
+button.bt1 {
+    position: relative;
+    width: 100%;
+
+    background: linear-gradient(45deg, #0bec4b, #ffcc70, #fd01b5);
+    background-size: 200% 200%;
+
+    color: #0c0000;
+    border: none;
+
+    padding: 14px 20px;
+    border-radius: 50px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+
+    transition: all 0.3s ease;
+    z-index: 1;
+
+    animation: fadeIn 0.8s ease-in-out, gradientShift 4s infinite;
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Softer overlay (less aggressive than before) */
+button.bt1::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+
+    background: linear-gradient(45deg, rgba(83,232,180,0.4), rgba(246,6,6,0.4));
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+/* Hover effect */
+button.bt1:hover::before {
+    opacity: 1;
+}
+
+button.bt1:hover {
+    transform: translateY(-3px) scale(1.03);
+    filter: brightness(1.1);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* Click effect */
+button.bt1:active {
+    transform: scale(0.98);
+}
+
+/* Fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

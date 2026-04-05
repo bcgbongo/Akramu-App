@@ -29,26 +29,57 @@
             border-radius: 10px;
         }
 
-        /* BIG DOWNLOAD BUTTON */
-        .big-download-btn {
-            display: inline-block;
-            width: 100%;
-            font-size: 26px;
-            padding: 18px;
-            border-radius: 50px;
-            font-weight: bold;
-            background: linear-gradient(45deg, #007bff, #00c6ff);
-            color: white;
-            border: none;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-            transition: 0.3s ease;
-        }
+        /* BIG DOWNLOAD BUTTON (RED VERSION) */
+.big-download-btn {
+    display: inline-block;
+    width: 100%;
 
-        .big-download-btn:hover {
-            transform: scale(1.05);
-            text-decoration: none;
-            color: white;
-        }
+    font-size: 26px;
+    padding: 18px;
+    border-radius: 50px;
+
+    font-weight: bold;
+    color: #fff;
+
+    border: none;
+
+    /* Premium red gradient */
+    background: linear-gradient(45deg, #ff0000, #ff4d4d, #b30000);
+    background-size: 200% 200%;
+
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.4);
+
+    transition: all 0.3s ease;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Smooth gradient animation */
+.big-download-btn {
+    animation: redShift 4s infinite;
+}
+
+@keyframes redShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Hover effect */
+.big-download-btn:hover {
+    transform: scale(1.06);
+    text-decoration: none;
+    color: #fff;
+
+    box-shadow: 0 12px 30px rgba(255, 0, 0, 0.6);
+    filter: brightness(1.1);
+}
+
+/* Click effect */
+.big-download-btn:active {
+    transform: scale(0.97);
+}
 
     </style>
 </head>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png">
+    <title>Akramu App</title>
+
+    <!-- Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .app-icon {
+            max-width: 180px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+        }
+
+        .screenshot {
+            max-width: 100%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        /* BIG DOWNLOAD BUTTON (RED VERSION) */
+.big-download-btn {
+    display: inline-block;
+    width: 100%;
+
+    font-size: 26px;
+    padding: 18px;
+    border-radius: 50px;
+
+    font-weight: bold;
+    color: #fff;
+
+    border: none;
+
+    /* Premium red gradient */
+    background: linear-gradient(45deg, #ff0000, #ff4d4d, #b30000);
+    background-size: 200% 200%;
+
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.4);
+
+    transition: all 0.3s ease;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Smooth gradient animation */
+.big-download-btn {
+    animation: redShift 4s infinite;
+}
+
+@keyframes redShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Hover effect */
+.big-download-btn:hover {
+    transform: scale(1.06);
+    text-decoration: none;
+    color: #fff;
+
+    box-shadow: 0 12px 30px rgba(255, 0, 0, 0.6);
+    filter: brightness(1.1);
+}
+
+/* Click effect */
+.big-download-btn:active {
+    transform: scale(0.97);
+}
+
+    </style>
+</head>
+
+<body>
+
+<div class="container text-center mt-5">
+
+    <!-- App Icon -->
+    <img src="icon.jpeg" alt="Soka Live" class="app-icon">
+
+    <!-- Title -->
+    <h1 class="font-weight-bold">Osmani App</h1>
+    <p class="lead">Furahia Mpira, Tamthilia, Magazeti na Tetesi za Soka</p>
+
+    <div class="row mt-4">
+
+        <!-- Download Section -->
+        <div class="col-md-4 mb-4">
+            <h3 class="mb-3">Download the App</h3>
+
+            <a href="https://play.google.com/store/apps/details?id=com.burudanitv.app" 
+               class="big-download-btn">
+               <i class="bi bi-google-play"></i> Download Now
+            </a>
+        </div>
+
+        <!-- Screenshots -->
+        <div class="col-md-8">
+            <h3 class="mb-3">Screenshots</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="1.jpeg" alt="Screenshot 1" class="screenshot">
+                </div>
+                <div class="col-md-4">
+                    <img src="2.jpeg" alt="Screenshot 2" class="screenshot">
+                </div>
+                <div class="col-md-4">
+                    <img src="3.jpeg" alt="Screenshot 3" class="screenshot">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
